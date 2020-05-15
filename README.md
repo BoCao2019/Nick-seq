@@ -17,6 +17,6 @@ The ratio cutoffs can be varied in the Excel spreadsheet as needed. For example,
 
 
 |Nb.BsmI-nickase-NT	|E.coli K12 DH10B	|Nb.BsmI	|experiment sample 	|R1-Nick translation|
-|-------------------|---------------------------|-------------------|-------------------|
+| ------------------- | --------------------------- | ------------------- | ------------------- |------------------- |
 
 
