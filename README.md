@@ -50,11 +50,7 @@ Trim Galore!, Bowtie 2, BamTools, and BEDTools.
 
 # GSE138173 (nickase site mapping)
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |NOnickase-NT	|NOnickase-NT_5CoverageForward.tabular	|NOnickase-NT_5CoverageReverse.tabular	|NOnickase-NT_FullCoverageForward.tabular	|NOnickase-NT_FullCoverageReverse.tabular|
 |Nb.BsmI-nickase-NT	|Nb.BsmI-nickase-NT_5CoverageForward.tabular	|Nb.BsmI-nickase-NT_5CoverageReverse.tabular	| 	| |
@@ -66,11 +62,7 @@ strand|
 
 # GSE138476 (DNA phosphorothioate modification mapping)
 
- |sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+ |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |S87-TdT-ctrl	|S87-TdT-ctrl_5CoverageForward.tabular	|S87-TdT-ctrl_5CoverageReverse.tabular	|S87-TdT-ctrl_FullCoverageForward.tabular	|S87-TdT-ctrl_FullCoverageReverse.tabular|
 |S87-TdT-iodine	|S87-TdT-iodine_5CoverageForward.tabular	|S87-TdT-iodine_5CoverageReverse.tabular	| 	| |
@@ -79,11 +71,7 @@ strand|
 
 # GSE138070 (DNA damage mapping)
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0mM-NO-NT	|0mM-NO-NT_5CoverageForward.tabular	|0mM-NO-NT_5CoverageReverse.tabular	|0mM-NO-NT_FullCoverageForward.tabular	|0mM-NO-NT_FullCoverageReverse.tabular|
 |0mM-EndoIV-NT	|0mM-EndoIV-NT_5CoverageForward.tabular	|0mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
@@ -103,22 +91,14 @@ In detail, the .tabular files generated from the previous step are used to calcu
 For example:
 For Nb.BsmI nickase mapping:
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |NOnickase-NT	|NOnickase-NT_5CoverageForward.tabular	|NOnickase-NT_5CoverageReverse.tabular	|NOnickase-NT_FullCoverageForward.tabular	|NOnickase-NT_FullCoverageReverse.tabular|
 |Nb.BsmI-nickase-NT	|Nb.BsmI-nickase-NT_5CoverageForward.tabular	|Nb.BsmI-nickase-NT_5CoverageReverse.tabular	| 	| |
 
 were used as input for R script: NT_positive_strand.R NT_negative_strand.R. to get the NT result of Nb.BsmI.
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |Nb.BsmI-NO-TdT	|Nb.BsmI-NO-TdT_5CoverageForward.tabular	|Nb.BsmI-NO-TdT_5CoverageReverse.tabular	|Nb.BsmI-NO-TdT_FullCoverageForward.tabular	|Nb.BsmI-NO-TdT_FullCoverageReverse.tabular|
 |Nb.BsmI-nickase-TdT	|Nb.BsmI-nickase-TdT_5CoverageForward.tabular	|Nb.BsmI-nickase-TdT_5CoverageReverse.tabular	| 	| |
@@ -128,22 +108,14 @@ Then combine the NT and TdT result getting from previous R script were merged us
 
 For Nb.BsrDI nickase mapping:
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |NOnickase-NT	|NOnickase-NT_5CoverageForward.tabular	|NOnickase-NT_5CoverageReverse.tabular	|NOnickase-NT_FullCoverageForward.tabular	|NOnickase-NT_FullCoverageReverse.tabular|
 |NbBsrDI-nickase-NT	|NbBsrDI-nickase-NT_5CoverageForward.tabular	|NbBsrDI-nickase-NT_5CoverageReverse.tabular	| 	| |
 
 were used as input for R script: NT_positive_strand.R NT_negative_strand.R. to get the NT result of Nb.BsrDI.
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |NbBsrDI-NO-TdT	|NbBsrDI-NO-TdT_5CoverageForward.tabular	|NbBsrDI-NO-TdT_5CoverageReverse.tabular	|NbBsrDI-NO-TdT_FullCoverageForward.tabular	|NbBsrDI-NO-TdT_FullCoverageReverse.tabular|
 |NbBsrDI-nickase-TdT	|NbBsrDI-nickase-TdT_5CoverageForward.tabular	|NbBsrDI-nickase-TdT_5CoverageReverse.tabular	| 	| |
@@ -155,11 +127,7 @@ For PT mapping:
 
 GSE138476 (DNA phosphorothioate modification mapping)
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |S87-NT-ctrl	|S87-NT-ctrl_5CoverageForward.tabular	|S87-NT-ctrl_5CoverageReverse.tabular	|S87-NT-ctrl_FullCoverageForward.tabular	|S87-NT-ctrl_FullCoverageReverse.tabular|
 |S87-NT-iodine	|S87-NT-iodine_5CoverageForward.tabular	|S87-NT-iodine_5CoverageReverse.tabular	| 	| |
@@ -168,11 +136,7 @@ were used as input for R script: NT_positive_strand.R NT_negative_strand.R. to g
 
 GSE138476 (DNA phosphorothioate modification mapping)
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |S87-TdT-ctrl	|S87-TdT-ctrl_5CoverageForward.tabular	|S87-TdT-ctrl_5CoverageReverse.tabular	|S87-TdT-ctrl_FullCoverageForward.tabular	|S87-TdT-ctrl_FullCoverageReverse.tabular|
 |S87-TdT-iodine	|S87-TdT-iodine_5CoverageForward.tabular	|S87-TdT-iodine_5CoverageReverse.tabular	| 	| |
@@ -182,11 +146,7 @@ Then combine the NT and TdT results getting from previous R script were merged u
 
 For AP site mapping:
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0mM-NO-NT	|0mM-NO-NT_5CoverageForward.tabular	|0mM-NO-NT_5CoverageReverse.tabular	|0mM-NO-NT_FullCoverageForward.tabular	|0mM-NO-NT_FullCoverageReverse.tabular|
 |0mM-EndoIV-NT	|0mM-EndoIV-NT_5CoverageForward.tabular	|0mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
@@ -194,11 +154,7 @@ strand|
 were used as input for R script: NT_positive_strand.R NT_negative_strand.R. to get the NT result of 0 mM H2O2.
 At 0 mM H2O2(on genome):
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0mM-NO-TdT	|0mM-NO-TdT_5CoverageForward.tabular	|0mM-NO-TdT_5CoverageReverse.tabular	|0mM-NO-TdT_FullCoverageForward.tabular	|0mM-NO-TdT_FullCoverageReverse.tabular|
 |0mM-EndoIV-TdT	|0mM-EndoIV-TdT_5CoverageForward.tabular	|0mM-EndoIV-TdT_5CoverageReverse.tabular	| 	| |
@@ -208,22 +164,14 @@ Then combine the NT and TdT result getting from previous R script were merged us
 
 At 0.2 mM H2O2(on genome):
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0.2mM-NO-NT	|0.2mM-NO-NT_5CoverageForward.tabular	|0.2mM-NO-NT_5CoverageReverse.tabular	|0.2mM-NO-NT_FullCoverageForward.tabular	|0.2mM-NO-NT_FullCoverageReverse.tabular|
 |0.2mM-EndoIV-NT	|0.2mM-EndoIV-NT_5CoverageForward.tabular	|0.2mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
 
 were used as input for R script: NT_positive_strand.R NT_negative_strand.R. to get the NT result of 0.2 mM H2O2.
 
-|sample	|processed data file: 5’ coverage_positive strand 	|processed data file:
-5’ coverage_negative
-strand	|processed data file:
-full coverage_positive strand 	|processed data file: full coverage_negative
-strand|
+|sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0.2mM-NO-TdT	|0.2mM-NO-TdT_5CoverageForward.tabular	|0.2mM-NO-TdT_5CoverageReverse.tabular	|0.2mM-NO-TdT_FullCoverageForward.tabular	|0.2mM-NO-TdT_FullCoverageReverse.tabular|
 |0.2mM-EndoIV-TdT	|0.2mM-EndoIV-TdT_5CoverageForward.tabular	|0.2mM-EndoIV-TdT_5CoverageReverse.tabular	| 	| |
