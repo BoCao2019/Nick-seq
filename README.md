@@ -47,7 +47,8 @@ Sequencing results were processed on the Galaxy web platform (https://usegalaxy.
 
 **Tools used:**
 
-- Trim Galore!, Bowtie 2
+- Trim Galore!
+- Bowtie 2
 - BamTools
 - BEDTools
 
@@ -99,14 +100,14 @@ From these datasets, the intersection of the datasets from the NT and TdT method
 |NOnickase-NT	|NOnickase-NT_5CoverageForward.tabular	|NOnickase-NT_5CoverageReverse.tabular	|NOnickase-NT_FullCoverageForward.tabular	|NOnickase-NT_FullCoverageReverse.tabular|
 |Nb.BsmI-nickase-NT	|Nb.BsmI-nickase-NT_5CoverageForward.tabular	|Nb.BsmI-nickase-NT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of Nb.BsmI.
+The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of Nb.BsmI.
 
 |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |Nb.BsmI-NO-TdT	|Nb.BsmI-NO-TdT_5CoverageForward.tabular	|Nb.BsmI-NO-TdT_5CoverageReverse.tabular	|Nb.BsmI-NO-TdT_FullCoverageForward.tabular	|Nb.BsmI-NO-TdT_FullCoverageReverse.tabular|
 |Nb.BsmI-nickase-TdT	|Nb.BsmI-nickase-TdT_5CoverageForward.tabular	|Nb.BsmI-nickase-TdT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of Nb.BsmI.
+The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of Nb.BsmI.
 Then combine the NT and TdT result getting from previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
 The output file could be opened in excel and result in final tables and figures: **Figure 2**, **Supplementary Table 2**.
 
@@ -117,16 +118,16 @@ The output file could be opened in excel and result in final tables and figures:
 |NOnickase-NT	|NOnickase-NT_5CoverageForward.tabular	|NOnickase-NT_5CoverageReverse.tabular	|NOnickase-NT_FullCoverageForward.tabular	|NOnickase-NT_FullCoverageReverse.tabular|
 |NbBsrDI-nickase-NT	|NbBsrDI-nickase-NT_5CoverageForward.tabular	|NbBsrDI-nickase-NT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of Nb.BsrDI.
+The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of Nb.BsrDI.
 
 |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |NbBsrDI-NO-TdT	|NbBsrDI-NO-TdT_5CoverageForward.tabular	|NbBsrDI-NO-TdT_5CoverageReverse.tabular	|NbBsrDI-NO-TdT_FullCoverageForward.tabular	|NbBsrDI-NO-TdT_FullCoverageReverse.tabular|
 |NbBsrDI-nickase-TdT	|NbBsrDI-nickase-TdT_5CoverageForward.tabular	|NbBsrDI-nickase-TdT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R to get the TdT** result of Nb.BsrDI.
+The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of Nb.BsrDI.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures:** Supplementary Figure 1, Supplementary Table 3**.
+The output file could be opened in excel and result in final tables and figures: **Supplementary Figure 1, Supplementary Table 3**.
 
 **For PT mapping:**
 
@@ -138,7 +139,7 @@ The output file could be opened in excel and result in final tables and figures:
 |S87-NT-iodine	|S87-NT-iodine_5CoverageForward.tabular	|S87-NT-iodine_5CoverageReverse.tabular	| 	| |
 
 
-The datasets as listed in the table abover were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of PT.
+The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of PT.
 
 **GSE138476 (DNA phosphorothioate modification mapping)**
 
@@ -147,7 +148,7 @@ The datasets as listed in the table abover were used as input for R script: **NT
 |S87-TdT-ctrl	|S87-TdT-ctrl_5CoverageForward.tabular	|S87-TdT-ctrl_5CoverageReverse.tabular	|S87-TdT-ctrl_FullCoverageForward.tabular	|S87-TdT-ctrl_FullCoverageReverse.tabular|
 |S87-TdT-iodine	|S87-TdT-iodine_5CoverageForward.tabular	|S87-TdT-iodine_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of PT.
+The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of PT.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
 The output file could be opened in excel and result in final tables and figures: **Figure 3, Supplementary Table 4**.
 
@@ -158,7 +159,7 @@ The output file could be opened in excel and result in final tables and figures:
 |0mM-NO-NT	|0mM-NO-NT_5CoverageForward.tabular	|0mM-NO-NT_5CoverageReverse.tabular	|0mM-NO-NT_FullCoverageForward.tabular	|0mM-NO-NT_FullCoverageReverse.tabular|
 |0mM-EndoIV-NT	|0mM-EndoIV-NT_5CoverageForward.tabular	|0mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of 0 mM H2O2.
+The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of 0 mM H2O2.
 
 **At 0 mM H2O2(on genome):**
 
@@ -168,7 +169,7 @@ The datasets as listed in the table abover were used as input for R script: **NT
 |0mM-EndoIV-TdT	|0mM-EndoIV-TdT_5CoverageForward.tabular	|0mM-EndoIV-TdT_5CoverageReverse.tabular	| 	| |
 
 
-The datasets as listed in the table abover  were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0 mM H2O2.
+The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0 mM H2O2.
 Then combine the NT and TdT result getting from previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
 The output file could be opened in excel and result in final tables and figures: **Figure 4, Supplementary Table 5**.
 
@@ -179,18 +180,18 @@ The output file could be opened in excel and result in final tables and figures:
 |0.2mM-NO-NT	|0.2mM-NO-NT_5CoverageForward.tabular	|0.2mM-NO-NT_5CoverageReverse.tabular	|0.2mM-NO-NT_FullCoverageForward.tabular	|0.2mM-NO-NT_FullCoverageReverse.tabular|
 |0.2mM-EndoIV-NT	|0.2mM-EndoIV-NT_5CoverageForward.tabular	|0.2mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of 0.2 mM H2O2.
+The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of 0.2 mM H2O2.
 
 |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0.2mM-NO-TdT	|0.2mM-NO-TdT_5CoverageForward.tabular	|0.2mM-NO-TdT_5CoverageReverse.tabular	|0.2mM-NO-TdT_FullCoverageForward.tabular	|0.2mM-NO-TdT_FullCoverageReverse.tabular|
 |0.2mM-EndoIV-TdT	|0.2mM-EndoIV-TdT_5CoverageForward.tabular	|0.2mM-EndoIV-TdT_5CoverageReverse.tabular	| 	| |
 
-The datasets as listed in the table abover were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0.2 mM H2O2.
+The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0.2 mM H2O2.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, TdT_negative+NT_positive.R. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
 The output file could be opened in excel and result in final tables and figures: **Figure 4, Supplementary Figure 2, Supplementary Table 5**.
 
-The result for AP site on plasmid using the same workflow except change the reference sequence in Bowtie2 with the plasmid sequence and generate the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
+The results for AP site on plasmid using the same workflow except change the reference sequence in Bowtie2 with the plasmid sequence and generate the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
 
 
 
