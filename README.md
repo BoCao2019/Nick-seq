@@ -13,13 +13,10 @@ The ratio cutoffs can be varied in the Excel spreadsheet as needed. For example,
 
 
 
-|title	|organism	|treatment	|role	|library prep|
-| ------------- | ------------- |------------- |------------- |------------- |------------- |
-|NOnickase-NT	|E.coli K12 DH10B	|none	|negative control	|R1-Nick translation|
 |Nb.BsmI-nickase-NT	|E.coli K12 DH10B	|Nb.BsmI	|experiment sample 	|R1-Nick translation|
-|Nb.BsmI-NO-TdT	|E.coli K12 DH10B	|none	|negative control	|R2-TdT dependent|
-|Nb.BsmI-nickase-TdT	|E.coli K12 DH10B	|Nb.BsmI	|experiment sample 	|R2-TdT dependent|
+|Nb.BsmI-NO-TdT	    |E.coli K12 DH10B	|none	    |negative control	  |R2-TdT dependent   |
+|Nb.BsmI-nickase-TdT|E.coli K12 DH10B	|Nb.BsmI	|experiment sample 	|R2-TdT dependent   |
 |NbBsrDI-nickase-NT	|E.coli K12 DH10B	|Nb.BsrDI	|experiment sample 	|R1-Nick translation|
-|NbBsrDI-NO-TdT	|E.coli K12 DH10B	|none	|negative control	|R2-TdT dependent|
-|NbBsrDI-nickase-TdT	|E.coli K12 DH10B	|Nb.BsrDI	|experiment sample 	|R2-TdT dependent|
+|NbBsrDI-NO-TdT   	|E.coli K12 DH10B	|none	    |negative control	  |R2-TdT dependent   |
+|NbBsrDI-nickase-TdT|E.coli K12 DH10B	|Nb.BsrDI	|experiment sample 	|R2-TdT dependent   |
 
