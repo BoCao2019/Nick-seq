@@ -9,3 +9,8 @@ For both NT or TdT data on each strand, three “.tabular” files containing th
 Three ratios were calculated at each position by RStudio for modification site calling: coverage of position N (sample)/coverage of position N-1(sample), coverage of position N(sample)/coverage of position N+1(sample), and coverage of position N(sample)/coverage of position N(control). Positions with a ratio>1 were retained using the following R scripts: TdT_positive_strand.R TdT_negative_strand.R NT_positive_strand.R NT_negative_strand.R From these datasets, the intersection of the datasets from the NT and TdT methods were calculated using the following R scripts: TdT_positive+NT_negative.R TdT_negative+NT_positive.R The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
 
 The ratio cutoffs can be varied in the Excel spreadsheet as needed. For example, for site-specific nicking by Nb. BsmI and Nb. BsrDI, we determined that a ratio >2 was adequate to capture nearly all sites, while for variable sites (PT) or unknown samples (H2O2), the ratio was increased to 5-10.
+---
+|a|
+---
+
+
