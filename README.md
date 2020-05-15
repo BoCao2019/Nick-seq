@@ -150,7 +150,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of PT.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output data were further analized in excel and used for preparing final tables and figures: **Figure 3, Supplementary Table 4**.
+The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 3, Supplementary Table 4**.
 
 **For AP site mapping:**
 
@@ -171,7 +171,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0 mM H2O2.
 Then combine the NT and TdT result getting from previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output data were further analized in excel and used for preparing final tables and figures: **Figure 4, Supplementary Table 5**.
+The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 4, Supplementary Table 5**.
 
 **At 0.2 mM H2O2(on genome):**
 
@@ -189,7 +189,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0.2 mM H2O2.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures: **Figure 4, Supplementary Figure 2, Supplementary Table 5**.
+The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 4, Supplementary Figure 2, Supplementary Table 5**.
 
 The results for AP site on plasmid using the same workflow except changing the reference sequence in **Bowtie2** with the plasmid sequence and used for preparing the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
 
