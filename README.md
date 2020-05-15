@@ -154,14 +154,14 @@ The output file could be opened in excel and result in final tables and figures:
 
 **For AP site mapping:**
 
+**At 0 mM H2O2(on genome):**
+
 |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |0mM-NO-NT	|0mM-NO-NT_5CoverageForward.tabular	|0mM-NO-NT_5CoverageReverse.tabular	|0mM-NO-NT_FullCoverageForward.tabular	|0mM-NO-NT_FullCoverageReverse.tabular|
 |0mM-EndoIV-NT	|0mM-EndoIV-NT_5CoverageForward.tabular	|0mM-EndoIV-NT_5CoverageReverse.tabular	| 	| |
 
 The datasets as listed in the table above were used as input for R script: **NT_positive_strand.R NT_negative_strand.R.** to get the NT result of 0 mM H2O2.
-
-**At 0 mM H2O2(on genome):**
 
 |sample	|processed data file: 5’ coverage_positive strand 	|processed data file: 5’ coverage_negative strand	|processed data file: full coverage_positive strand 	|processed data file: full coverage_negative strand|
 | -------------	| -------------	| -------------	| -------------	| ------------- |
