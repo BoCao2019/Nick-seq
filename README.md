@@ -91,6 +91,7 @@ For both NT or TdT data on each strand, three “.tabular” files containing th
 
 ## Step 2: 
 **Using R to calculate coverage ratios of each position and combine the NT result and TdT result.**
+
 In detail, the .tabular files generated from Step 1 are used to calculate the coverage ratio of each position. Three ratios were calculated at each position by RStudio for modification site calling: coverage of position N (sample)/coverage of position N-1(sample), coverage of position N(sample)/coverage of position N+1(sample), and coverage of position N(sample)/coverage of position N(control). Positions with a ratio > 1 were obtained using the following R scripts: **TdT_positive_strand.R TdT_negative_strand.R NT_positive_strand.R NT_negative_strand.R**.  
 From these datasets, the intersection of the datasets from the NT and TdT methods were calculated using the following R scripts: **TdT_positive+NT_negative.R TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
 
