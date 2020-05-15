@@ -10,7 +10,10 @@ Three ratios were calculated at each position by RStudio for modification site c
 
 The ratio cutoffs can be varied in the Excel spreadsheet as needed. For example, for site-specific nicking by Nb. BsmI and Nb. BsrDI, we determined that a ratio >2 was adequate to capture nearly all sites, while for variable sites (PT) or unknown samples (H2O2), the ratio was increased to 5-10.
 
-
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
 
 |Nb.BsmI-nickase-NT	|E.coli K12 DH10B	|Nb.BsmI	|experiment sample 	|R1-Nick translation|
