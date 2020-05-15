@@ -43,7 +43,7 @@ Here is the sample description for the different samples in GEO database.
 
 ## Step 1: 
 From raw .fq.gz data to .tabular data containing read coverage information on each position (on Galaxy website)
-Sequencing results were processed on the Galaxy web platform (https://usegalaxy.org/). Initially, the paired-end reads were pre-processed by Trim Galore! to remove adapters, as well as trimming the first 3 bp on the 5’ end of read 1. All the reads were aligned to the corresponding genome using Bowtie 2. A custom method for peak calling of sequencing data was developed with BamTools, BEDTools and Rstudio. Briefly, the BamTools results were filtered based on R1 (selected for NT data) or R2 (selected for TdT data). The 5’ coverage (experiment sample and controls) or full coverage (controls) on each position were calculated based on the filtered BamTools results by BEDTools (positive and negative strand separately).
+Sequencing results were processed on the Galaxy web platform (https://usegalaxy.org/). Initially, the paired-end reads were pre-processed by Trim Galore! to remove adapters, as well as trimming the first 3 bp on the 5’ end of read 1. All the reads were aligned to the corresponding genome using tie 2. A custom method for peak calling of sequencing data was developed with BamTools, BEDTools and Rstudio. Briefly, the BamTools results were filtered based on R1 (selected for NT data) or R2 (selected for TdT data). The 5’ coverage (experiment sample and controls) or full coverage (controls) on each position were calculated based on the filtered BamTools results by BEDTools (positive and negative strand separately).
 
 **Tools used:**
 
@@ -109,7 +109,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of Nb.BsmI.
 Then combine the NT and TdT result getting from previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures: **Figure 2**, **Supplementary Table 2**.
+The output data were further analized in excel and used for preparing final tables and figures: **Figure 2**, **Supplementary Table 2**.
 
 **For Nb.BsrDI nickase mapping:**
 
@@ -127,7 +127,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of Nb.BsrDI.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures: **Supplementary Figure 1, Supplementary Table 3**.
+The output data were further analized in excel and used for preparing final tables and figures: **Supplementary Figure 1, Supplementary Table 3**.
 
 **For PT mapping:**
 
@@ -150,7 +150,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of PT.
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures: **Figure 3, Supplementary Table 4**.
+The output data were further analized in excel and used for preparing final tables and figures: **Figure 3, Supplementary Table 4**.
 
 **For AP site mapping:**
 
@@ -171,7 +171,7 @@ The datasets as listed in the table above were used as input for R script: **NT_
 
 The datasets as listed in the table above were used as input for R script: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT result of 0 mM H2O2.
 Then combine the NT and TdT result getting from previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
-The output file could be opened in excel and result in final tables and figures: **Figure 4, Supplementary Table 5**.
+The output data were further analized in excel and used for preparing final tables and figures: **Figure 4, Supplementary Table 5**.
 
 **At 0.2 mM H2O2(on genome):**
 
@@ -191,7 +191,7 @@ The datasets as listed in the table above were used as input for R script: **TdT
 Then combine the NT and TdT results getting from previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
 The output file could be opened in excel and result in final tables and figures: **Figure 4, Supplementary Figure 2, Supplementary Table 5**.
 
-The results for AP site on plasmid using the same workflow except change the reference sequence in Bowtie2 with the plasmid sequence and generate the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
+The results for AP site on plasmid using the same workflow except changing the reference sequence in **Bowtie2** with the plasmid sequence and used for preparing the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
 
 
 
