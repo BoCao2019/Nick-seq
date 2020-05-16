@@ -197,5 +197,103 @@ The output data were further analyzed in excel and used for preparing final tabl
 
 The same workfflow is applied for analyzing AP site on plasmid except for using a different reference sequence in **Bowtie2** with the plasmid sequence. The final outputs were analyzed in excel and used for preparing the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
 
+## Example workflow:
 
+Nb.BsmI nickase mapping data is used here as a example to demonstrate the workflow of  generating the final data in the manuscript.
+
+1. Download the raw fastq file from NCBI website
+NOnickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923833
+NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923834
+NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923835
+NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923836
+
+2. Remove adapters, as well as trim the first 3 bp on the 5’ end of read 1 and all the adapters (illumina adapter and polyA on read 2 if universal primer for sequencing was used) for the pair-end reads using Trim Galore!.
+
+- input: fq.gz
+- output: fq.gz
+
+3. Align all the reads to the corresponding genome using Bowtie 2. The reference for nickase mapping is E.coli K12 DH10B genome (https://www.ncbi.nlm.nih.gov/nuccore/NC_010473.1).
+
+- input: fq.gz
+- output: .bam
+
+4.Fillter the pair-end reads based on R1 (selected for NT data) or R2 (selected for TdT data) using BamTools.
+
+- input: .bam
+- output: .bam
+
+5. Calculate the 5’ coverage (experiment sample and controls) or full coverage (controls) on each position using BEDTools.
+
+- input: .bam
+- output: .tabular
+
+The data (.tabular format) processed by steps 1 to 5 have been released in GEO database and can be accessed via the following links:
+
+NOnickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101224
+NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101225
+NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101226
+NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
+
+6. Calculate coverage ratios of each position
+Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**,  **TdT_negative_strand.R **
+
+Reading data from .tabular files in R scripts:
+•	data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage got from BEDTools
+•	dataF<- read.table("control_coverage_5.tabular",header=FALSE) ##control 5’ coverage got from BEDTools
+•	data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage got from BEDTools
+
+Output:
+sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
+sample_(-)_NT_Coverage ratios.csv from NT_negative_strand.R. 
+sample_(+)_TdT_Coverage ratios.csv from TdT_positive_strand.R
+sample_(-)_TdT_Coverage ratios.csv from TdT_negative_strand.R 
+
+The output in the .csv files were outlined as follow:
+
+|Chro	|position	|coverage1	|coverage_before	|coverage_after	|coverageF	|coverage5	|C1CB	|C1CA	|C1CF	|C1C5	|pos_before_15	|pos_after_15	|strand	|NorC1CF	|NorC1C5|
+| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| ------------- |
+|pJTU1238	|6318	|2155	|141	|63	|3	|2233	|15.28369	|34.20635	|718.3333	|0.965069	|6303	|6333	|+	|1873.161	|2.516562|
+
+7. Combine the NT result and TdT result
+ From these datasets, the intersection of the datasets from the NT and TdT methods was calculated using the following R scripts: TdT_positive+NT_negative.R TdT_negative+NT_positive.R. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
+Input for TdT_positive+NT_negative.R:
+- sample_(+)_TdT_Coverage ratios.csv
+- sample_(-)_NT_Coverage ratios.csv
+
+output for TdT_positive+NT_negative.R:
+- sample_(-)_TdT-NT_compare.csv
+
+Input for TdT_negative+NT_positive.R:
+- sample_(-)_TdT_Coverage ratios.csv
+- sample_(+)_NT_Coverage ratios.csv
+
+output for TdT_negative+NT_positive.R:
+- sample_(+)_TdT-NT_compare.csv
+
+8. The final .csv outputs could be analyzed in excel to examine the details of each position by setting ratio cut-off and generating final results.
+
+|Chro	|position	|coverage1	|coverage_before	|coverage_after	|coverageF	|coverage5	|C1CB	|C1CA	|C1CF	|C1C5	|pos_before_15	|pos_after_15	|strand	|NorC1CF	|NorC1C5	|NTposition	|NTstrand|
+| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| ------------- |
+|pJTU1238	|6318	|2155	|141	|63	|3	|2233	|15.28369	|34.20635	|718.3333	|0.965069	|6303	|6333	|-	|1873.161	|2.516562	|6318	|+|
+
+Each of the headings in excel files means:
+
+- Chro: the genome sequence we mapped to 
+- position: the genome position of each site
+- coverage1: the 5’ coverage of the sample at position from TdT result
+- coverage_before: the 5’ coverage of the sample at position-1bp from TdT result
+- coverage_after: the 5’ coverage of the sample at position+1bp from TdT result
+- coverageF: the full coverage of the negative control at position from TdT result
+- coverage5: the 5’ coverage of the negative control at position from TdT result	
+- C1CB:	coverage1/ coverage_before
+- C1CA: coverage1/ coverage_after
+- C1CF: coverage1/ coverageF
+- C1C5: coverage1/ coverage5
+- pos_before_15: position-15bp
+- pos_after_15: position+15bp
+- strand: the strand of the read from TdT result
+- NorC1CF: normalized C1CF (normalize by read count of the sample and negative control)
+- NorC1C5: normalized C1C5 (normalize by read count of the sample and negative control)
+- NTposition: whether we find NT result in 1 bp range of position, and write the position from - the NT method, if yes, means two methods both find this position
+- NTstrand: the strand of the read from NT result, should be different from TdT since NT is - based on R1 read and TdT is based on R2 read.
 
