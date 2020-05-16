@@ -219,7 +219,7 @@ The same workfflow is applied for analyzing AP site on plasmid except for using 
 - input: fq.gz
 - output: .bam
 
-4.Fillter the pair-end reads based on R1 (selected for NT data) or R2 (selected for TdT data) using BamTools.
+4. Fillter the pair-end reads based on R1 (selected for NT data) or R2 (selected for TdT data) using BamTools.
 
 - input: .bam
 - output: .bam
