@@ -240,9 +240,10 @@ The data (.tabular format) processed by steps 1 to 5 have been released in GEO d
 Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**, **TdT_negative_strand.R**.
 
 Reading data from .tabular files in R scripts:
-•	data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage got from BEDTools
-•	dataF<- read.table("control_coverage_5.tabular",header=FALSE) ##control 5’ coverage got from BEDTools
-•	data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage got from BEDTools
+
+- data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage got from BEDTools
+- dataF<- read.table("control_coverage_5.tabular",header=FALSE) ##control 5’ coverage got from BEDTools
+- data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage got from BEDTools
 
 Output:
 sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
