@@ -261,8 +261,8 @@ The output in the .csv files were outlined as follow:
 | -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| ------------- |
 |pJTU1238	|6318	|2155	|141	|63	|3	|2233	|15.28369	|34.20635	|718.3333	|0.965069	|6303	|6333	|+	|1873.161	|2.516562|
 
-7. Combine the NT result and TdT result
- From these datasets, the intersection of the datasets from the NT and TdT methods was calculated using the following R scripts: **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
+7. Combine the NT results and TdT results
+From these datasets, the intersection of the datasets from the NT and TdT methods was calculated using the following R scripts: **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
 
 Input for TdT_positive+NT_negative.R:
 - sample_(+)_TdT_Coverage ratios.csv
