@@ -203,10 +203,11 @@ The same workfflow is applied for analyzing AP site on plasmid except for using 
 **Nb.BsmI nickase mapping data is used here as a example to demonstrate the workflow of  generating the final data in the manuscript.**
 
 1. Download the raw fastq file from NCBI website
-NOnickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923833
-NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923834
-NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923835
-NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923836
+
+- NOnickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923833
+- NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923834
+- NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923835
+- NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923836
 
 2. Remove adapters, as well as trim the first 3 bp on the 5’ end of read 1 and all the adapters (illumina adapter and polyA on read 2 if universal primer for sequencing was used) for the pair-end reads using Trim Galore!.
 
@@ -230,10 +231,10 @@ NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923836
 
 The data (.tabular format) processed by steps 1 to 5 have been released in GEO database and can be accessed via the following links:
 
-NOnickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101224
-NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101225
-NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101226
-NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
+- NOnickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101224
+- NbBsmI-nickase-NT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101225
+- NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101226
+- NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
 
 6. Calculate coverage ratios of each position
 Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**, **TdT_negative_strand.R**.
