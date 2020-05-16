@@ -197,9 +197,10 @@ The output data were further analyzed in excel and used for preparing final tabl
 
 The same workfflow is applied for analyzing AP site on plasmid except for using a different reference sequence in **Bowtie2** with the plasmid sequence. The final outputs were analyzed in excel and used for preparing the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
 
+
 ## Example workflow:
 
-Nb.BsmI nickase mapping data is used here as a example to demonstrate the workflow of  generating the final data in the manuscript.
+**Nb.BsmI nickase mapping data is used here as a example to demonstrate the workflow of  generating the final data in the manuscript.**
 
 1. Download the raw fastq file from NCBI website
 NOnickase-NT: https://www.ncbi.nlm.nih.gov/sra?term=SRX6923833
@@ -235,7 +236,7 @@ NbBsmI-NO-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101226
 NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
 
 6. Calculate coverage ratios of each position
-Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**,  **TdT_negative_strand.R **
+Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**, **TdT_negative_strand.R**.
 
 Reading data from .tabular files in R scripts:
 •	data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage got from BEDTools
@@ -255,7 +256,8 @@ The output in the .csv files were outlined as follow:
 |pJTU1238	|6318	|2155	|141	|63	|3	|2233	|15.28369	|34.20635	|718.3333	|0.965069	|6303	|6333	|+	|1873.161	|2.516562|
 
 7. Combine the NT result and TdT result
- From these datasets, the intersection of the datasets from the NT and TdT methods was calculated using the following R scripts: TdT_positive+NT_negative.R TdT_negative+NT_positive.R. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
+ From these datasets, the intersection of the datasets from the NT and TdT methods was calculated using the following R scripts: **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites.
+
 Input for TdT_positive+NT_negative.R:
 - sample_(+)_TdT_Coverage ratios.csv
 - sample_(-)_NT_Coverage ratios.csv
