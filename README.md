@@ -236,7 +236,11 @@ The data (.tabular format) processed by steps 1 to 5 have been released in GEO d
 - NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
 
 6. Calculate coverage ratios of each position
-Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**, **TdT_negative_strand.R**.
+Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: 
+- NT_positive_strand.R
+- NT_negative_strand.R
+- TdT_positive_strand.R
+- TdT_negative_strand.R
 
 Reading data from .tabular files in R scripts:
 
@@ -283,22 +287,22 @@ The output in the .csv files were outlined as follow:
 
 Each of the headings in excel files means:
 
-- Chro: the genome sequence we mapped to 
+- Chro: the genome sequence we mapped from 
 - position: the genome position of each site
-- coverage1: the 5’ coverage of the sample at position from TdT result
-- coverage_before: the 5’ coverage of the sample at position-1bp from TdT result
-- coverage_after: the 5’ coverage of the sample at position+1bp from TdT result
-- coverageF: the full coverage of the negative control at position from TdT result
-- coverage5: the 5’ coverage of the negative control at position from TdT result	
+- coverage1: the 5’ coverage of the sample at position from TdT results
+- coverage_before: the 5’ coverage of the sample at position-1bp from TdT results
+- coverage_after: the 5’ coverage of the sample at position+1bp from TdT results
+- coverageF: the full coverage of the negative control at position from TdT results
+- coverage5: the 5’ coverage of the negative control at position from TdT results
 - C1CB:	coverage1/ coverage_before
 - C1CA: coverage1/ coverage_after
 - C1CF: coverage1/ coverageF
 - C1C5: coverage1/ coverage5
 - pos_before_15: position-15bp
 - pos_after_15: position+15bp
-- strand: the strand of the read from TdT result
+- strand: the strand of the read from TdT results
 - NorC1CF: normalized C1CF (normalize by read count of the sample and negative control)
 - NorC1C5: normalized C1C5 (normalize by read count of the sample and negative control)
-- NTposition: whether we find NT result in 1 bp range of position, and write the position from - the NT method, if yes, means two methods both find this position
-- NTstrand: the strand of the read from NT result, should be different from TdT since NT is - based on R1 read and TdT is based on R2 read.
+- NTposition: the position in NT results which was also found in TdT results at the same position or within the tolerance of 1 bp position shift
+- NTstrand: the strand of the read we found from NT result, which should be different from TdT results since NT is based on R1 read and TdT is based on R2 read.
 
