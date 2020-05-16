@@ -52,7 +52,6 @@ Sequencing results were processed on the Galaxy web platform (https://usegalaxy.
 - Bowtie 2
 - BamTools
 - BEDTools
-- Rstudio
 
 **GSE138173 (nickase site mapping)**
 
