@@ -71,7 +71,7 @@ Sequencing results were processed on the Galaxy web platform (https://usegalaxy.
 | -------------	| -------------	| -------------	| -------------	| ------------- |
 |S87-TdT-ctrl	|S87-TdT-ctrl_5CoverageForward.tabular	|S87-TdT-ctrl_5CoverageReverse.tabular	|S87-TdT-ctrl_FullCoverageForward.tabular	|S87-TdT-ctrl_FullCoverageReverse.tabular|
 |S87-TdT-iodine	|S87-TdT-iodine_5CoverageForward.tabular	|S87-TdT-iodine_5CoverageReverse.tabular	| 	| |
-|S87-NT-ctrl	|S87-NT-ctrl_5CoverageForward.tabular	|S87-NT-ctrl_5CoverageReverse.tabular	|S87-NT-ctrl_FullCoverageForward.tabular	|S87-NT-ctrl_FullCoverageReverse.tabular|
+|S87-NT-ctrl	|S87-NT-ctrl_5CoverageForward.tabular	|S87-NT-.000.tabular	|S87-NT-ctrl_FullCoverageForward.tabular	|S87-NT-ctrl_FullCoverageReverse.tabular|
 |S87-NT-iodine	|S87-NT-iodine_5CoverageForward.tabular	|S87-NT-iodine_5CoverageReverse.tabular	| 	| |
 
 **GSE138070 (DNA damage mapping)**
@@ -152,7 +152,7 @@ The datasets as listed in the table above were used as input for R scripts: **NT
 |S87-TdT-iodine	|S87-TdT-iodine_5CoverageForward.tabular	|S87-TdT-iodine_5CoverageReverse.tabular	| 	| |
 
 The datasets as listed in the table above were used as input for R scripts: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT results of PT.
-Then the NT and TdT results analyzed and output by the previous R scripts were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
+Then the NT and TdT results analyzed and output by the previous R scripts were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative PT sites. 
 The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 3, Supplementary Table 4**.
 
 **For AP site mapping:**
@@ -173,7 +173,7 @@ The datasets as listed in the table above were used as input for R scripts: **NT
 
 
 The datasets as listed in the table above were used as input for R scripts: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT results of 0 mM H2O2.
-Then the NT and TdT results analyzed and output by the previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
+Then the NT and TdT results analyzed and output by the previous R script were merged using **TdT_positive+NT_negative.R, TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative AP sites. 
 The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 4, Supplementary Table 5**.
 
 **At 0.2 mM H2O2(on genome):**
