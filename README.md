@@ -191,7 +191,7 @@ The datasets as listed in the table above were used as input for R scripts: **NT
 |0.2mM-EndoIV-TdT	|0.2mM-EndoIV-TdT_5CoverageForward.tabular	|0.2mM-EndoIV-TdT_5CoverageReverse.tabular	| 	| |
 
 The datasets as listed in the table above were used as input for R scripts: **TdT_positive_strand.R TdT_negative_strand.R** to get the TdT results of 0.2 mM H2O2.
-Then the NT and TdT results analyzed and output by the previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative nick sites. 
+Then the NT and TdT results analyzed and output by the previous R script were merged using **TdT_positive+NT_negative.R**, **TdT_negative+NT_positive.R**. The output files (CSV files; Excel format) contain the read coverage ratio information for the putative AP sites. 
 The output data were further analyzed in excel and used for preparing final tables and figures: **Figure 4, Supplementary Figure 2, Supplementary Table 5**.
 
 The same workfflow is applied for analyzing AP site on plasmid except for using a different reference sequence in **Bowtie2** with the plasmid sequence. The final outputs were analyzed in excel and used for preparing the final tables and figures: **Figure 4, Table 2, Supplementary Figure 2, Supplementary Table 6**.
