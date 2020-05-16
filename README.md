@@ -246,7 +246,7 @@ Reading data from .tabular files in R scripts:
 
 Output:
 - sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
-- sample_(-)_NT_Coverage ratios.csv from NT_negative_strand.R. 
+- sample_(-)_NT_Coverage ratios.csv from NT_negative_strand.R 
 - sample_(+)_TdT_Coverage ratios.csv from TdT_positive_strand.R
 - sample_(-)_TdT_Coverage ratios.csv from TdT_negative_strand.R 
 
