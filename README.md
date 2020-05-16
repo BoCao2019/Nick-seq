@@ -236,12 +236,7 @@ The data (.tabular format) processed by steps 1 to 5 have been released in GEO d
 - NbBsmI-nickase-TdT: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM4101227
 
 6. Calculate coverage ratios of each position
-Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: 
-
-- NT_positive_strand.R
-- NT_negative_strand.R
-- TdT_positive_strand.R
-- TdT_negative_strand.R
+Each dataset of positive or negative strands from either NT or TdT method was processed through the corresponding R scripts: **NT_positive_strand.R**, **NT_negative_strand.R**, **TdT_positive_strand.R**, **TdT_negative_strand.R**
 
 Reading data from .tabular files in R scripts:
 
@@ -250,10 +245,10 @@ Reading data from .tabular files in R scripts:
 - data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage output from BEDTools
 
 Output:
-sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
-sample_(-)_NT_Coverage ratios.csv from NT_negative_strand.R. 
-sample_(+)_TdT_Coverage ratios.csv from TdT_positive_strand.R
-sample_(-)_TdT_Coverage ratios.csv from TdT_negative_strand.R 
+- sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
+- sample_(-)_NT_Coverage ratios.csv from NT_negative_strand.R. 
+- sample_(+)_TdT_Coverage ratios.csv from TdT_positive_strand.R
+- sample_(-)_TdT_Coverage ratios.csv from TdT_negative_strand.R 
 
 The output in the .csv files were outlined as follow:
 
