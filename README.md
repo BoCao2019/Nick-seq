@@ -241,9 +241,9 @@ Each dataset of positive or negative strands from either NT or TdT method was pr
 
 Reading data from .tabular files in R scripts:
 
-- data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage got from BEDTools
-- dataF<- read.table("control_coverage_5.tabular",header=FALSE) ##control 5’ coverage got from BEDTools
-- data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage got from BEDTools
+- data1<- read.table("sample_coverage_5.tabular",header=FALSE) ##sample 5’ coverage output from BEDTools
+- dataF<- read.table("control_coverage_5.tabular",header=FALSE) ##control 5’ coverage output from BEDTools
+- data5<- read.table("control_coverage_full.tabular",header=FALSE) ##control full coverage output from BEDTools
 
 Output:
 sample_(+)_NT_Coverage ratios.csv from NT_positive_strand.R
@@ -275,6 +275,8 @@ output for TdT_negative+NT_positive.R:
 - sample_(+)_TdT-NT_compare.csv
 
 8. The final .csv outputs could be analyzed in excel to examine the details of each position by setting ratio cut-off and generating final results.
+
+The output in the .csv files were outlined as follow:
 
 |Chro	|position	|coverage1	|coverage_before	|coverage_after	|coverageF	|coverage5	|C1CB	|C1CA	|C1CF	|C1C5	|pos_before_15	|pos_after_15	|strand	|NorC1CF	|NorC1C5	|NTposition	|NTstrand|
 | -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| -------------	| ------------- |
