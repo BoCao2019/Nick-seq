@@ -44,7 +44,7 @@ The table below outlined the descriptions of the data in GEO database.
 ## Step 1: 
 **Read coverage calculation from raw sequencing data in .fq.gz format**
 
-Sequencing results were processed on the Galaxy web platform (https://usegalaxy.org/). Initially, the paired-end reads were pre-processed by **Trim Galore!** to remove adapters, as well as trimming the first 3 bp on the 5’ end of read 1. All the reads were aligned to the corresponding genome using tie 2. A custom method for peak calling of sequencing data was developed with **BamTools**, **BEDTools** and **Rstudio**. Briefly, the BamTools results were filtered based on R1 (selected for NT data) or R2 (selected for TdT data). The 5’ coverage (experiment sample and controls) or full coverage (controls) on each position were calculated based on the filtered **BamTools** results by **BEDTools** (positive and negative strand separately).
+Sequencing results were processed on the Galaxy web platform (https://usegalaxy.org/). Initially, the paired-end reads were pre-processed by **Trim Galore!** to remove adapters, as well as trimming the first 3 bp on the 5’ end of read 1. All the reads were aligned to the corresponding genome using **Browtie 2**. A custom method for peak calling of sequencing data was developed with **BamTools**, **BEDTools** and **Rstudio**. Briefly, the BamTools results were filtered based on R1 (selected for NT data) or R2 (selected for TdT data). The 5’ coverage (experiment sample and controls) or full coverage (controls) on each position were calculated based on the filtered **BamTools** results by **BEDTools** (positive and negative strand separately).
 
 **Tools used:**
 
