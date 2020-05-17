@@ -1,7 +1,7 @@
-# Nick-seq
+# Nick-seq scripts and data processing protocol
 The repository contains R scripts for Nick-seq data processing. DOI: 10.1101/845768. Here you will find R scripts used for data mining, access to the reads data and description of our workflow.
 
-# Access to read data
+# Access to Nick-seq read data
 The raw data of the format **.fq.gz** and **.tabular** has been released on NCBI GEO database with the assigned accession number GSE138173 (nickase site mapping), GSE138476 (DNA phosphorothioate modification mapping), GSE138070 (DNA damage mapping).
 The table below outlined the descriptions of the data in GEO database.
 
