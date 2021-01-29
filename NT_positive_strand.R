@@ -1,4 +1,8 @@
-﻿###This script use sample coverage file got from BEDTools as input, normalize the reads based on total read coverage and count and filter the position with read coverage higher than its neighborhood position. This one is for positive strand in NT part analysis. Output is a csv files containing all the position read coverage ratio data which can be directly viewed in Excel.
+###This script uses sample coverage file from BEDTools as input
+###Normalize the reads based on total read coverage
+###count and filter the position with read coverage higher than its neighborhood position
+###This script is for positive strand in NT part analysis
+###Output as csv files containing all the position read coverage ratio data which can be directly viewed in Excel.
 
 data1<- read.table("sample_coverage_5.tabular",header=FALSE) ## sample 5’ R1 coverage got from BEDTools, positive strand
 dataF<- read.table("control_coverage_5.tabular",header=FALSE) ## control 5’ R1 coverage got from BEDTools, positive strand
